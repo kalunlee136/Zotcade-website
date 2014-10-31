@@ -1,0 +1,240 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Documentation Flipping Cards</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">&ldquo;Flipping Cards&rdquo; Documentation by &ldquo;David Blanco&rdquo; v2.0</h3>
+		
+		<hr>
+		
+		<h1 class="center">&ldquo;Flipping Cards&rdquo;</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: Januray/1/2013<br>
+					By: David Blanco<br>
+					Email: <a href="mailto:davidbo90@gmail.com.com">davidbo90@gmail.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing my item. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://codecanyon.net/user/davidbo90">here</a>. Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#htmlStructure">HTML Structure</a></li>
+			<li><a href="#cssFiles">CSS Files and Structure</a></li>
+			<li><a href="#javascript">JavaScript</a></li>
+		</ol>
+		
+		<hr>
+		
+		<h3 id="htmlStructure"><strong>A) HTML Structure</strong> - <a href="#toc">top</a></h3>
+		<h5>
+			In order the Flipping Cards to take effect you need to add the folders css and js where your html file is:
+		</h5>
+		<img src="assets/images/ss01.png" alt="HTML Structure" />
+
+		<h5>And this peace of code at the beggining of you html:</h5>
+		<img src="assets/images/ss0.png" alt="HTML Structure" />
+
+		<br><br>
+
+		<h5>Easy html markup for creating a Flipping Card: <br></h5>
+		<p>
+
+			Each card needs to be nested within a section tag with a class of "card-container". Inside the section tag all needs to be nested within a div with a class of "card", and here is where we can change the behavior of the Flipping Card. Inside there are 2 divs, one with a class of "Front" for the Front side of the card, and the other with a class of "back" for the Back side of the card.<br>
+
+			<h5>We have 4 options to trigger the effect:</h5>
+			<ul>
+				<li>
+					<strong>When we move the mouse over the card</strong>, just add a class of "over" to the div with a class of "card" like in the example that follows. <br>
+					<img src="assets/images/ss1.png" alt="HTML Structure" />
+				</li>
+				<li>
+					<strong>When we move click the card</strong>, just add a class of "click" to the div with a class of "card" like in the example that follows. <br>
+					<img src="assets/images/ss2.png" alt="HTML Structure" />
+				</li>
+				<li>
+					<strong>When we want a button inside the card to activate the effect</strong>, don't add a class to the div with a class of "card" like before, instead add a class of "cbutton" to the element that you want the effect to be activated by, in the example that follows is activated by a button (input type="button"). <br>
+					<img src="assets/images/ss3.png" alt="HTML Structure" />
+				</li>
+				<li>
+					<strong>When we want a card to flip automatically</strong>, also don't add any extra class like over or click just leave it with "card" like before, and now you can use 2 attributes to specify the auto flip. First the "data-autoflip" parameter that will be the time that you wish the card to wait until its next auto flip, and the second parameter "data-start" that will be the time that you whish the card to wait until its <strong>first</strong> flip after the page load.
+					<img src="assets/images/ss8.png" alt="">
+				</li>
+			</ul>
+		</p>
+		
+		<h5>You can also change the direction of the Flipping Card (you have 4 options): </h5>
+		<p>All you need is to change the data-direction tag of the div with a class of "card"</p>
+		<ul>
+			<li>
+				<strong>right</strong> <br>
+				<img src="assets/images/ss4.png" alt="HTML Structure" />
+			</li>
+			<li>
+				<strong>left</strong> <br>
+				<img src="assets/images/ss5.png" alt="HTML Structure" />
+			</li>
+			<li>
+				<strong>top</strong> <br>
+				<img src="assets/images/ss6.png" alt="HTML Structure" />
+			</li>
+			<li>
+				<strong>bottom</strong> <br>
+				<img src="assets/images/ss7.png" alt="HTML Structure" />
+			</li>
+		</ul>
+		
+		<h5>There are already few defaults colors available for your flipping card and you can just add the class of the color to the div with a class of "card-container". These are the colors available:</h5>
+		<ul>
+			<li>purple</li>
+			<li>red</li>
+			<li>blue</li>
+			<li>light-blue</li>
+			<li>green</li>
+			<li>orange</li>
+			<li>yellow</li>
+		</ul>
+
+		<p>
+			For example if you wish to add the blue color just add it like this:
+			<img src="assets/images/ss9.png" alt="">
+		</p>
+	
+		<p>
+			If you wish to create your own color you can go ahead and take a look at the end of the flipCard.css file to the ones that are already there and copy the pattern that goes like this (e.g. for a black color):
+		</p>
+
+		<pre>
+	/* BLACK */
+	.black div.card{
+		color: white;
+		border: 1px solid black;
+	}
+
+	.black div.card div{
+		background: black; 
+	}
+		</pre>
+
+		<p>
+			And then just add it there to the flipCard.css file.
+		</p>
+
+		<p>
+			If you would like to edit the background color, color, font, or style of the Flipping Cards, you would do the following:
+		</p>
+
+<pre>	.card-container .card div{
+	    background: #FBFBFB;
+	    border: 1px solid #BFBFBF;
+	}
+</pre>
+		<p>
+			If you want to be more especific and edit just one side you would do the following for the front side:
+		</p>
+
+<pre>	.card-container .card div.front{
+	    background: #FBFBFB;
+	    border: 1px solid #BFBFBF;
+	}
+</pre>
+		<p>
+			and you would do the following for the back side:
+		</p>
+<pre>	.card-container .card div.back{
+	    background: #FBFBFB;
+	    border: 1px solid #BFBFBF;
+	}
+</pre>
+
+		<p>
+			If you want to edit the velocity of the Flipping Card you would do the following (just change the .7s to the velocity in seconds that you wish):
+		</p>
+<pre>	.card-container .card {
+		-webkit-transition: -webkit-transform .7s;
+		 -moz-transition: -moz-transform .7s;
+		   -o-transition: -o-transform .7s;
+		  -ms-transition: -o-transform .7s;
+		      transition: transform .7s;
+	  }
+</pre>	
+
+		<p>So, to ensure that your new styles are applied, make sure that they carry enough "weight" and that there isn't a style lower in the CSS file that is being applied after yours.</p> 
+
+		<hr>
+
+		<h3 id="cssFiles"><strong>B) CSS Files and Structure</strong> - <a href="#toc">top</a></h3>
+
+		<p>I'm using two CSS files in this plugin. The first one is just some random style for the demo, and it is NOT needed. </p> 
+
+		<p>The second one contains all the CSS3 3D effects and style for the Flipping Cards. The file is separated into sections using:</p>  
+
+<pre>	/* === CARD CONTAINER === */
+
+	some code
+
+	/* === CARD === */
+	
+	some code
+	
+	/* === STYLE FOR THE FRONT & BACK SIDE === */
+	
+	some code
+	
+	/* === BEGGINING EFFECT === */
+	
+	some code
+	
+	/* === EFFECT DIRECTIONS === */
+	
+	some code
+</pre>
+		
+		<p>If you would like to edit a specific section of the site, simply find the appropriate label in the CSS file, and then scroll down until you find the appropriate style that needs to be edited.</p> 
+
+
+		<hr>
+		
+		<h3 id="javascript"><strong>C) JavaScript</strong> - <a href="#toc">top</a></h3>
+		
+		<p>This plugin imports two Javascript files.</p>
+		
+		<ol>
+			<li>jQuery</li>
+			<li>My custom scripts</li>
+		</ol>
+		  
+		<ol>
+			<li>jQuery is a Javascript library that greatly reduces the amount of code that you must write.</li>
+			<li>Most of the animation in this site is carried out from the customs scripts. 
+			</li>
+		</ol>
+		
+		<hr>
+	</div><!-- end div .container -->
+</body>
+</html>
