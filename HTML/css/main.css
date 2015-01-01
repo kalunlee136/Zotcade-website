@@ -113,7 +113,8 @@ h4 {
 	font-family:'sinkin_sans400_regular';
 	font-size:17px;
 	letter-spacing:-1px;
-	margin-bottom:5px;	
+	margin-bottom:5px;
+	text-align: center;	
 }
 
 .lead {
@@ -453,7 +454,7 @@ html, body {
 /* VENUE */
 
 #venue {
-	padding:0 0 80px 0;
+	padding:0 0 10px 0;
 }
 
 .venue {
@@ -722,6 +723,7 @@ html, body {
 	max-width:none!important;
 	background:none!important
 }
+
 
 .social {
 	margin:10px 0;
